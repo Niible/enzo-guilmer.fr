@@ -24,7 +24,8 @@
                 }else{
                     $Parsedown = new ParsedownExtensionMathJaxLaTeX();
                 }
-                echo $Parsedown->text(str_replace("&amp;","&",str_replace("&quot;","\"",str_replace("&lt;","<",str_replace("&gt;",">",$Article['article'])))));
+                $text = $Parsedown->text($Article['article']);
+                echo str_replace("&lt;","<",str_replace("&quot;","\"",str_replace("&amp;","&",str_replace("&gt;",">",$text))));
             ?>
         </article>
     </div>
