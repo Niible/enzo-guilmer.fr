@@ -17,13 +17,13 @@
             <div class="cards">
                 <div class="card" style="width:50%">
                     <h2 class="card-title">Login</h2>
-                    <form method="POST">
+                    <form method="POST" action="admin">
 
                         <div class="form-group">
                             <label>Root</label>
 
-                            <input id="text" type="text" class="form-control form-control-lg" name="login" value=""
-                                required autofocus>
+                            <input id="text" type="text" class="form-control form-control-lg" name="login" required
+                                autofocus>
                         </div>
 
                         <div class="form-group">
