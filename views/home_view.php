@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1 style='display:none'>Enzo Guilmer</h1>
+    <h1 style='display:none'>Enzo Guilmer Développeur informatique</h1>
     <?php include_once 'views/includes/header.php';?>
     <div class="container">
         <div class="wrapper">
@@ -18,10 +18,9 @@
                 <div class="welcome-message">
                     <div class="welcome">
                         <h1>Hello world!</h1>
-                        <p>Ici vous allez retrouver différentes notes que je prends pendant mon apprentissage de
-                            l'informatique !<br>
-                            Vous retrouverez en sources les liens des différents cours que j'ai suivis pour obtenir ces
-                            notes.</p>
+                        <p>Moi c'est Enzo et découvrez ici les différentes notes que je prends tout au long de ma
+                            formation !<br>Certain de ses cours sont des retranscription de cours, d'autres sont des
+                            tutoriels trouvés ici et là sur internet</p>
                         <p>Pour toutes questions ou remarques n'hésitez pas à me contacter en appuyant sur le bouton
                             en-dessous !</p>
                         <div class="contact-button"> <a href="/cv#contact" class="contact-link">Contact</a>

@@ -3,12 +3,12 @@
 
 <head>
     <meta name="robots" content="noindex, nofollow">
-    <?php include_once 'views/includes/head.php';?>
     <?php if($Article['latex']==0){?>
     <link rel="stylesheet" href="assets/stylesheets/prism.css">
     <?php }?>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <?php include_once 'views/includes/head.php';?>
 
     <title>Enzo Guilmer - <?=$Article['titre']?></title>
 </head>
