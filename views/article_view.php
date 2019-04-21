@@ -27,7 +27,8 @@
             <?php if($Article['latex']==0){
                     $Parsedown = new Parsedown();
                     $text = $Parsedown->text($Article['article']);
-                    echo str_replace("&lt;","<",str_replace("&quot;","\"",str_replace("&amp;","&",str_replace("&gt;",">",$text))));
+                    // echo $text;
+                    echo str_replace("&gt;",">",str_replace("&quot;","\"",str_replace("&amp;","&",str_replace("&lt;","<",$text))));
                 }elseif($Article['latex']==1){
                     $Parsedown = new ParsedownExtensionMathJaxLaTeX();
                     $text = $Parsedown->text($Article['article']);
