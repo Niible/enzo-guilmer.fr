@@ -2,6 +2,17 @@
 <html lang='fr'>
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138874771-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138874771-1');
+    </script>
 
     <?php include_once 'views/includes/head.php';?>
 
@@ -26,7 +37,7 @@
                         <div class="contact-button"> <a href="/cv#contact" class="contact-link">Contact</a>
                             <?php if(isset($_SESSION['login'])){
                                 if($_SESSION['login'] == 'root'){?>
-                            <form id='ajouter' action="modifier" method="post">
+                            <form id='ajouter' action="modifier" method="get">
                                 <input name='ajouter' type='hidden'>
 
                                 <a href="javascript:{}" onclick="document.getElementById('ajouter').submit();"
@@ -37,7 +48,7 @@
                     </div>
                     <div class="card"><a href="javascript:{}"
                             onclick="document.getElementById('article<?=$lastArticle['id']?>').submit();">
-                            <form id='article<?=$lastArticle['id']?>' action='article' method='post'>
+                            <form id='article<?=$lastArticle['id']?>' action='article' method='get'>
                                 <input name='article' value='<?=$lastArticle['id']?>' type='hidden'>
                                 <div class="card-heade">
                                     <div class="img-container"> <span class="card-index">#<?=$lastArticle['id']?></span>
@@ -58,7 +69,7 @@
                         </div>
                         <?php if(isset($_SESSION['login'])){
                                 if($_SESSION['login'] == 'root'){?>
-                        <form id='modifier' action="modifier" method="post">
+                        <form id='modifier' action="modifier" method="get">
                             <input name='modifier' value='<?=$lastArticle['id']?>' type='hidden'>
                             <div class="buttons">
                                 <a href="javascript:{}"
@@ -77,7 +88,7 @@
                         <?php $a = 0; foreach ($allArticles as $key => $article) {?>
 
                         <div class="card">
-                            <form id='article<?=$article['id']?>' action='article' method='post'>
+                            <form id='article<?=$article['id']?>' action='article' method='get'>
                                 <input name='article' value='<?=$article['id']?>' type='hidden'>
                                 <a href="javascript:{}"
                                     onclick="document.getElementById('article<?=$article['id']?>').submit();">
@@ -100,7 +111,7 @@
                             </form>
                             <?php if(isset($_SESSION['login'])){
                                 if($_SESSION['login'] == 'root'){?>
-                            <form id='modifier<?=$article['id']?>' action="modifier" method="post">
+                            <form id='modifier<?=$article['id']?>' action="modifier" method="get">
                                 <input name='modifier' value='<?=$article['id']?>' type='hidden'>
                                 <div class="buttons">
                                     <a href="javascript:{}"

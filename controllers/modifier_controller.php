@@ -1,8 +1,8 @@
 <?php
 // debug($_POST);
 
-if(isset($_POST['modifier'])){
-    $Article = Article::getArticle(intval($_POST['modifier']));
+if(isset($_GET['modifier'])){
+    $Article = Article::getArticle(intval($_GET['modifier']));
 }else{
     $a = Article::getLastArticle();
     $id = intval($a['id'])+1;

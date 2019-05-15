@@ -2,6 +2,18 @@
 <html>
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138874771-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138874771-1');
+    </script>
+
     <meta name="robots" content="noindex, nofollow">
     <?php if($Article['latex']==0){?>
     <link rel="stylesheet" href="assets/stylesheets/prism.css">

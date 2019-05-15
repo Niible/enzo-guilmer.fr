@@ -30,7 +30,7 @@ if(isset($_SESSION['login'])){?>
 
 
     <div class="container">
-        <?php if(isset($_POST['ajouter'])){?>
+        <?php if(isset($_GET['ajouter'])){?>
         <h2>Nouvel article</h2><?php }else{?>
         <h2>Modifier article</h2>
         <?php }?>
@@ -39,10 +39,10 @@ if(isset($_SESSION['login'])){?>
                 <div class="form-group">
                     <label>Titre</label>
                     <input type="hidden" name="id"
-                        value="<?php if(isset($_POST['ajouter'])){echo($id);}else{echo($Article['id']);}?>">
+                        value="<?php if(isset($_GET['ajouter'])){echo($id);}else{echo($Article['id']);}?>">
                     <input type="text" name="titre" class="form-control" value="<?=$Article['titre']?>">
                 </div>
-                <?php if(isset($_POST['modifier'])){?>
+                <?php if(isset($_GET['modifier'])){?>
                 <div class="form-group">
                     <label>Date</label>
                     <input type="text" name="date" class="form-control" value="<?=$Article['date']?>">
@@ -70,7 +70,7 @@ if(isset($_SESSION['login'])){?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <div id="main" <?php if(isset($_POST['modifier'])&&$Article['latex']==2){?>style='display:block;'
+                    <div id="main" <?php if(isset($_GET['modifier'])&&$Article['latex']==2){?>style='display:block;'
                         <?php }else{?>style='display:none' <?php }?>>
                         <div id="controls">
                             <div id="header">IPython/Jupyter</div>
@@ -81,7 +81,7 @@ if(isset($_SESSION['login'])){?>
                         </div>
                     </div>
                 </div>
-                <?php if(isset($_POST['ajouter']) || $Article['latex']!=2){?>
+                <?php if(isset($_GET['ajouter']) || $Article['latex']!=2){?>
                 <div id='markdown'>
                     <label>Article</label>
                     <div id="editormd">
@@ -91,8 +91,8 @@ if(isset($_SESSION['login'])){?>
                 </div><?php }?>
         </div>
         <button type="submit" style='width:100%' class="btn btn-primary mb-2"
-            name="<?php if(isset($_POST['ajouter'])){echo('btn-aj');}else{echo('btn-modif');}?>">
-            <?php if(isset($_POST['ajouter'])){echo('Poster un nouvel ');}else{echo('Modifier l\'');}?>article</button>
+            name="<?php if(isset($_GET['ajouter'])){echo('btn-aj');}else{echo('btn-modif');}?>">
+            <?php if(isset($_GET['ajouter'])){echo('Poster un nouvel ');}else{echo('Modifier l\'');}?>article</button>
         </form>
     </div>
 
